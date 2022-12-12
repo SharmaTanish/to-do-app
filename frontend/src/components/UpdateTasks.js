@@ -19,8 +19,10 @@ class UpdateTasks extends React.Component{
         const url = `http://localhost:3000/updatetasks?id=${id}`;
         
         var num;
-        if(comp===true) num=1;
+        if(comp==="true") num=1;
         else num=0;
+
+        // console.log(num);
 
         fetch(url,{
             method:"put",
