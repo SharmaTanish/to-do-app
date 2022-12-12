@@ -1,9 +1,9 @@
-const {Tasks} = require("./models");
+var {Tasks} = require("./models");
 
 
 const create_tasks = async (request,response)=>{
     var task = request.body;
-    await Tasks.create(task); 
+    await Tasks.create(task);  //jo body mai task aa raha hai mai usse direct bhej raha hu!
     response.json({status:"Task created!"});
 }
 
